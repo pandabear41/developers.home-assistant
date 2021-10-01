@@ -26,11 +26,12 @@ To ensure that the documentation for Home Assistant is consistent and easy to fo
 - All examples should be formatted to be included in `configuration.yaml` unless explicitly stated.
   - Use capital letters and `_` to indicate that the value needs to be replaced. E.g., `api_key: YOUR_API_KEY` or `api_key: REPLACE_ME`.
 - Integration and platform names should be a link to their respective documentation pages.
+- Multiple configurations blocks on the same page will need the optional parameter on the tag to be set to an unique user friendly name. E.g., `{% configuration wireless %}` and `{% configuration wired %}` on the same page.
 
 Example configuration block
 
 ```yaml
-{% configuration %}
+{% configuration [Optional config name] %}
 some_key:
   description: This is a description of what this key is for.
   required: false

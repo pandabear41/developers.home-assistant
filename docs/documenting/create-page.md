@@ -51,10 +51,10 @@ A couple of points to remember:
 
 Every platform page should contain a configuration sample. This sample must contain only the **required** variables to make it easy to copy and paste it for users into their `configuration.yaml` file.
 
-The **Configuration Variables** section must use the `{% configuration %} ... {% endconfiguration %}` tag.
+The **Configuration Variables** section must use the `{% configuration %} ... {% endconfiguration %}` tag. If **multiple configuration blocks** exist on one page use the `{% configuration [config name] %}` beginning tag, replacing `[config name]` with a unique user friendly name.
 
 ```text
-{% configuration %}
+{% configuration [Optional config name] %}
 api_key:
   description: The API key to access the service.
   required: true
